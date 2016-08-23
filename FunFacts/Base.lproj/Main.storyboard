@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,18 +18,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Some fact goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmM-UH-Jld">
-                                <rect key="frame" x="279" y="289" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmM-UH-Jld">
+                                <rect key="frame" x="40" y="260" width="520" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Wcn-Cl-QW8"/>
+                                    <constraint firstAttribute="width" constant="520" id="YN0-Ht-zix"/>
+                                    <constraint firstAttribute="height" constant="21" id="zLV-7h-HXQ"/>
+                                </constraints>
+                                <string key="text">You are born with 300 bones; by the time you are an adult you will have 206. You are born with 300 bones; by the time you are an adult you will have 206.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YN0-Ht-zix"/>
+                                        <exclude reference="zLV-7h-HXQ"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKE-L3-s47">
+                                <rect key="frame" x="40" y="480" width="520" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hwq-RW-P0U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Show Another Fun Fact"/>
+                                <connections>
+                                    <action selector="showAnotherFactButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P5Y-BT-kKf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfJ-vj-BQi">
+                                <rect key="frame" x="40" y="118" width="118" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.3529411764705882" green="0.73333333333333328" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eKE-L3-s47" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4p4-Fg-PZZ"/>
+                            <constraint firstItem="wfJ-vj-BQi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="98" id="5DJ-aA-QM0"/>
+                            <constraint firstItem="jmM-UH-Jld" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ag4-al-TCN"/>
+                            <constraint firstItem="jmM-UH-Jld" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BPy-Te-Eyj"/>
+                            <constraint firstItem="jmM-UH-Jld" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BkH-u3-I4r"/>
+                            <constraint firstItem="jmM-UH-Jld" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C0E-f4-CE0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jmM-UH-Jld" secondAttribute="trailing" constant="20" id="L8s-xH-h6e"/>
+                            <constraint firstItem="eKE-L3-s47" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="THK-hc-MVo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eKE-L3-s47" secondAttribute="bottom" constant="80" id="Vxk-k9-L8x"/>
+                            <constraint firstItem="jmM-UH-Jld" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="XzS-3F-FHR"/>
+                            <constraint firstItem="wfJ-vj-BQi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="bIT-rM-DLk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eKE-L3-s47" secondAttribute="trailing" constant="20" id="pID-gG-LWq"/>
+                            <constraint firstItem="eKE-L3-s47" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="rFF-P2-Ef1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ag4-al-TCN"/>
+                                <exclude reference="BPy-Te-Eyj"/>
+                                <exclude reference="THK-hc-MVo"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="funFactLabel" destination="jmM-UH-Jld" id="dfs-oB-bNg"/>
+                        <outlet property="showAntoherFactButton" destination="eKE-L3-s47" id="oaq-px-LQV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="325" y="400"/>
         </scene>
     </scenes>
 </document>
